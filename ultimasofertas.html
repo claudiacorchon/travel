@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Ultimas Ofertas</title>
+  <link rel="icon" type="image/png" href="imagenes/avionazul.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+  var end = new Date('1/01/2019 9:30 AM');
+
+  var _second = 1000;
+  var _minute = _second * 60;
+  var _hour = _minute * 60;
+  var _day = _hour * 24;
+  var timer;
+
+  function showRemaining() {
+    var now = new Date();
+    var distance = end - now;
+    if (distance < 0) {
+
+      clearInterval(timer);
+      document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+      return;
+    }
+    var days = Math.floor(distance / _day);
+    var hours = Math.floor((distance % _day) / _hour);
+    var minutes = Math.floor((distance % _hour) / _minute);
+    var seconds = Math.floor((distance % _minute) / _second);
+
+    document.getElementById('countdown').innerHTML = days + ' dias, ';
+    document.getElementById('countdown').innerHTML += hours + ' horas, ';
+    document.getElementById('countdown').innerHTML += minutes + ' minutos y ';
+    document.getElementById('countdown').innerHTML += seconds + ' segundos';
+  }
+
+  timer = setInterval(showRemaining, 1000);
+</script>
+</head>
+<body background="imagenes/nubes.jpg" style="background-repeat: no-repeat; background-size: cover;">
+
+<div class="tipoletra">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><b>TRAVEL TOGETHER</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="viajes.html">Viajes <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ultimasofertas.html">Ultimas ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactaconnosotros.html">Contacta con nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tucuenta.html">Tu cuenta</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+  <div class="corre"><h2><b>¡Corre, que se acaban!</b></h2>
+  </div>
+  <div class="cuenta">
+    <div id="countdown"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="row" style="padding: 10px 20px;">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/europa1copia.png" class="card-img-top" alt="europa">
+          <div class="card-body">
+            <h5 class="card-title"><b><u><i>Europa</i></u></b></h5>
+            <p class="card-text">Encuentra tus destinos más cercanos al mejor precio ¿Para qué ir más lejos?</p>
+            <a href="loading2.html" class="btn btn-primary">Encontrar vuelos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/caribecopia.jpg" class="card-img-top" alt="europa">
+          <div class="card-body">
+            <h5 class="card-title"><b><u><i>Caribe</i></u></b></h5>
+            <p class="card-text">Visita los mejores destinos paradisiacos por un precio inmejorable</p>
+            <a href="loading2.html" class="btn btn-primary">Encontrar vuelos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/usa.jpg" class="card-img-top" alt="europa">
+          <div class="card-body">
+            <h5 class="card-title"><b><u>E.E.U.U.</u></b></h5>
+            <p class="card-text">¡Viajar a Norte América nunca había sido tan fácil!</p>
+            <a href="loading2.html" class="btn btn-primary">Encontrar vuelos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

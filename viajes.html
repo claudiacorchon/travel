@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Viajes</title>
+  <link rel="icon" type="image/png" href="imagenes/avionazul.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+  </script>
+  <script>
+    $( function() {
+      $( "#datepickervuelta" ).datepicker();
+    } );
+  </script>
+</head>
+
+<body background="imagenes/viajefondo.jpg" style="background-repeat: no-repeat; background-size: cover;">
+
+<div class="tipoletra">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><b>TRAVEL TOGETHER</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="viajes.html">Viajes <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ultimasofertas.html">Ultimas ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactaconnosotros.html">Contacta con nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tucuenta.html">Tu cuenta</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="input-group input-group-lg centrarform">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">ORIGEN</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="input-group input-group-lg centrardestino">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">DESTINO</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="input-group input-group-lg centrardestino">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">FECHA IDA</span>
+        </div>
+        <input type="text" id="datepicker">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="input-group input-group-lg centrardestino">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">FECHA VUELTA</span>
+        </div>
+        <input type="text" id="datepickervuelta">
+      </div>
+    </div>
+  </div>
+
+  <div class="botonbuscar">
+    <a class="nav-link" href="loading.html"><button>BUSCAR</button></a>
+  </div>
+
+</body>
+</html>
